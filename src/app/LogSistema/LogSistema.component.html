@@ -13,53 +13,55 @@
                                   <tr>
                                       <td width="30%" style="text-align:center">Código Expediente</td>
                                       <td width="70%">
-                                            <input width="60%" type="text" value="" class="form-control" placeholder="Ingrese el código aquí...">
+                                            <tr>
+                                                <td><input type="text" value="" class="form-check" placeholder="PCEN..."></td>
+                                                <td><input type="text" value="" class="form-check" placeholder="Año..."></td>
+                                                <td><input type="text" value="" class="form-check" placeholder="Correlativo..."></td>
+                                                <td width="10%"><button mat-raised-button type="button" matTooltip="Buscar" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                                        <i class="material-icons">search</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
                                       </td>                                                                      
                                   </tr> 
                                   <tr>
                                         <td width="30%" style="text-align:center">Usuario</td>
                                         <td width="70%">
-                                                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Elige el usuario
-                                                    </button>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <a class="dropdown-item">User 1</a>
-                                                        <a class="dropdown-item">User 2</a>
-                                                        <a class="dropdown-item">User 3</a>
-                                                        <a class="dropdown-item">User 4</a>
-                                                        <a class="dropdown-item">User 5</a>                                                
-                                                    </div>
+                                                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                                                <datalist id="datalistOptions">
+                                                    <option value="sharolinglg">
+                                                    <option value="wilson">
+                                                    <option value="willy">
+                                                    <option value="Juanito">
+                                                    <option value="Pedrito">
+                                                </datalist>
                                         </td>                                                                      
                                   </tr>
                                   <tr>
                                         <td width="30%" style="text-align:center">Sede</td>
                                         <td width="70%">
-                                            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Elige la Sede
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item">Central</a>
-                                                <a class="dropdown-item">Escuintla</a>
-                                                <a class="dropdown-item">Suchitepequez</a>
-                                                <a class="dropdown-item">Antigua</a>
-                                                <a class="dropdown-item">Petén</a>                                                
-                                            </div>
+                                            <input class="form-control" list="datalistOptions2" id="exampleDataList" placeholder="Type to search...">
+                                            <datalist id="datalistOptions2">
+                                                <option value="central">
+                                                <option value="peten">
+                                                <option value="mazatenango">
+                                                <option value="Jutiapa">
+                                                <option value="Escuintla">
+                                            </datalist>
                                         </td>                                                                      
                                   </tr>
                                   <tr>
                                         <td width="30%" style="text-align:center">Acción realizada</td>
                                         <td width="70%">
-                                            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Elige la opcion realizada
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item">Visualización</a>
-                                                <a class="dropdown-item">Carga</a>
-                                                <a class="dropdown-item">Descarga</a>
-                                                <a class="dropdown-item">Eliminación</a>
-                                                <a class="dropdown-item">Ingreso al sistema</a>
-                                                <a class="dropdown-item">Egreso del sistema</a>
-                                            </div>
+                                            <input class="form-control" list="datalistOptions3" id="exampleDataList" placeholder="Type to search...">
+                                            <datalist id="datalistOptions3">
+                                                <option value="Visualización">
+                                                <option value="Carga">
+                                                <option value="Descarga">
+                                                <option value="Eliminación">
+                                                <option value="Ingreso al sistema">
+                                                <option value="Egreso del sistema">
+                                            </datalist>                                            
                                         </td>                                                                      
                                   </tr>
                                   <tr>              
@@ -67,54 +69,51 @@
                                         <td width="70%">                                                                                           
                                             <div class="row">                                                                                        
                                                 <div class="col">
-                                                    <p>De: </p>
-                                                    <form class="form-inline">
-                                                    <div class="form-group">
-                                                        <div class="input-group">
-                                                        <input class="form-control" placeholder="dd/mm/yyyy"
-                                                                name="d2" #c2="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker">
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button"></button>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                    </form>                                                                                            
+                                                    <tr>
+                                                        <td><p>De: </p></td>
+                                                        <td>
+                                                            <form class="form-inline">
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                                                    <input class="form-control" placeholder="dd/mm/yyyy"
+                                                                            name="d2" #c2="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker">
+                                                                    <div class="input-group-append">
+                                                                        <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button"></button>
+                                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form> 
+                                                        </td>
+
+                                                        <td><p>Al: </p></td>
+                                                        <td>
+                                                            <form class="form-inline">
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                                                    <input class="form-control" placeholder="dd/mm/yyyy"
+                                                                            name="d2" #c2="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker">
+                                                                    <div class="input-group-append">
+                                                                        <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button"></button>
+                                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </td>
+                                                    </tr>                                                                                                                                     
                                                 </div>                                            
                                             </div>
                                         </td>                                                                      
-                                  </tr>
-                                  <tr>              
-                                        <td width="30%" style="text-align:center">   </td>                          
-                                        <td width="70%">                                                                                           
-                                            <div class="row">                                                                                        
-                                                <div class="col">
-                                                    <p>Al: </p>
-                                                    <form class="form-inline">
-                                                    <div class="form-group">
-                                                        <div class="input-group">
-                                                        <input class="form-control" placeholder="dd/mm/yyyy"
-                                                                name="d2" #c2="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker">
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button"></button>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                    </form>                                                                                            
-                                                </div>                                            
-                                            </div>
-                                        </td>                                                                      
-                                  </tr>
+                                  </tr>                                  
                                   <tr>
-                                        <td width="100%">
-                                            <button  type="button" style="top: 50%; left: 50%;background-color: rgb(44, 95, 172);" class="btn btn-primary">Aplicar Filtros</button>                                                           
-                                        </td>
-                                      </tr>
-                                  <tr>
-                                    <td width="100%" >
-                                        <button  type="button" style="top: 50%; left: 50%;background-color: rgb(6, 76, 180);" class="btn btn-primary">Descargar PDF</button>                   
-                                        <button  type="button" style="top: 50%; left: 50%;background-color: rgb(6, 76, 180);" class="btn btn-primary">Descargar Hoja de Cálculo</button>                   
-                                    </td>
-                                  </tr>                                       
+                                        <td> </td>
+                                        <td>
+                                            <tr>
+                                                <td><button  type="button" style="background-color: rgb(6, 76, 180);" class="btn btn-primary">Aplicar Filtros</button></td>
+                                                <td><button  type="button" style="background-color: rgb(6, 76, 180);" class="btn btn-primary">Descargar PDF</button></td>
+                                                <td><button  type="button" style="background-color: rgb(6, 76, 180);" class="btn btn-primary">Descargar Hoja de Cálculo</button></td>                                            
+                                            </tr>
+                                        </td>                                        
+                                  </tr>                                                                        
                               </tbody>
                           </table>
                       </div>
